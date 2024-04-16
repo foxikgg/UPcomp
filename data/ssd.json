@@ -1,0 +1,346 @@
+{
+    "m2": {
+        "256": {
+            "kingston": {
+                "nv1": {
+                    "price": 3899,
+                    "read": 2100,
+                    "write": 1100
+                },
+                "nv2": {
+                    "price": 3999,
+                    "read": 3000,
+                    "write": 1300
+                }
+            },
+            "patriot": {
+                "p300": {
+                    "price": 2299,
+                    "read": 1700,
+                    "write": 1100
+                }
+            },
+            "samsung": {
+                "980": {
+                    "price": 5499,
+                    "read": 2900,
+                    "write": 1300
+                },
+                "970evoplus": {
+                    "price": 6499,
+                    "read": 3500,
+                    "write": 2300
+                }
+            },
+            "xpg": {
+                "sx6000lite": {
+                    "price": 2799,
+                    "read": 1800,
+                    "write": 900
+                },
+                "sx6000pro": {
+                    "price": 2950,
+                    "read": 2100,
+                    "write": 1200
+                }
+            }
+        },
+        "512": {
+            "kingston": {
+                "nv2": {
+                    "price": 4899,
+                    "read": 3500,
+                    "write": 2100
+                },
+                "renegade": {
+                    "price": 7699,
+                    "read": 7300,
+                    "write": 3900
+                }
+            },
+            "netac": {
+                "nv2000": {
+                    "price": 4999,
+                    "read": 2500,
+                    "write": 1950
+                },
+                "nv5000pro": {
+                    "price": 5999,
+                    "read": 4800,
+                    "write": 2700
+                }
+            },
+            "patriot": {
+                "p310": {
+                    "price": 4099,
+                    "read": 1700,
+                    "write": 1500
+                },
+                "p300": {
+                    "price": 4499,
+                    "read": 1700,
+                    "write": 1200
+                },
+                "vpr400": {
+                    "price": 5699,
+                    "read": 4600,
+                    "write": 3600
+                }
+            },
+            "samsung": {
+                "980": {
+                    "price": 6299,
+                    "read": 3100,
+                    "write": 2600
+                },
+                "970evoplus": {
+                    "price": 7999,
+                    "read": 3500,
+                    "write": 3200
+                },
+                "980pro": {
+                    "price": 8999,
+                    "read": 6900,
+                    "write": 5000
+                }
+            },
+            "wd": {
+                "blue": {
+                    "price": 5999,
+                    "read": 560,
+                    "write": 510
+                }
+            },
+            "xpg": {
+                "sx6000pro": {
+                    "price": 3999,
+                    "read": 2100,
+                    "write": 1500
+                },
+                "sx8200pro": {
+                    "price": 4899,
+                    "read": 3350,
+                    "write": 2350
+                }
+            }
+        },
+        "1024": {
+            "kingston": {
+                "nv2": {
+                    "price": 6899,
+                    "read": 3500,
+                    "write": 2100
+                },
+                "renegade": {
+                    "price": 13299,
+                    "read": 7300,
+                    "write": 6000
+                }
+            },
+            "netac": {
+                "nv5000pro": {
+                    "price": 9799,
+                    "read": 5000,
+                    "write": 4400
+                }
+            },
+            "patriot": {
+                "p300": {
+                    "price": 7699,
+                    "read": 2100,
+                    "write": 1650
+                },
+                "vpr400": {
+                    "price": 8599,
+                    "read": 4600,
+                    "write": 4400
+                },
+                "vp4300": {
+                    "price": 9299,
+                    "read": 7400,
+                    "write": 5500
+                }
+            },
+            "samsung": {
+                "980": {
+                    "price": 10999,
+                    "read": 3500,
+                    "write": 3000
+                },
+                "970evoplus": {
+                    "price": 11499,
+                    "read": 3500,
+                    "write": 3300
+                },
+                "980pro": {
+                    "price": 14499,
+                    "read": 7000,
+                    "write": 5000
+                },
+                "990pro": {
+                    "price": 17999,
+                    "read": 7450,
+                    "write": 6900
+                }
+            },
+            "wd": {
+                "green": {
+                    "price": 7199,
+                    "read": 2400,
+                    "write": 1900
+                }
+            },
+            "xpg": {
+                "gammixs11pro": {
+                    "price": 7099,
+                    "read": 3500,
+                    "write": 3000
+                },
+                "sx8200pro": {
+                    "price": 7199,
+                    "read": 3350,
+                    "write": 2800
+                },
+                "blades70": {
+                    "price": 8999,
+                    "read": 7400,
+                    "write": 5500
+                }
+            }
+        }
+    },
+    "2.5": {
+        "256": {
+            "kingston": {
+                "a400": {
+                    "price": 3599,
+                    "read": 500,
+                    "write": 350
+                },
+                "kc600": {
+                    "price": 4399,
+                    "read": 550,
+                    "write": 500
+                }
+            },
+            "netac": {
+                "n600s": {
+                    "price": 2799,
+                    "read": 560,
+                    "write": 520
+                }
+            },
+            "patriot": {
+                "burstelite": {
+                    "price": 2199,
+                    "read": 450,
+                    "write": 320
+                },
+                "p210": {
+                    "price": 2799,
+                    "read": 500,
+                    "write": 400
+                }
+            },
+            "samsung": {
+                "870evo": {
+                    "price": 5999,
+                    "read": 560,
+                    "write": 530
+                }
+            },
+            "wd": {
+                "green": {
+                    "price": 3599,
+                    "read": 545,
+                    "write": 465
+                }
+            }
+        },
+        "512": {
+            "kingston": {
+                "a400": {
+                    "price": 3999,
+                    "read": 500,
+                    "write": 450
+                },
+                "kc600": {
+                    "price": 6399,
+                    "read": 550,
+                    "write": 520
+                }
+            },
+            "netac": {
+                "sa500": {
+                    "price": 3499,
+                    "read": 520,
+                    "write": 450
+                },
+                "n535s": {
+                    "price": 4499,
+                    "read": 560,
+                    "write": 520
+                }
+            },
+            "patriot": {
+                "burstelite": {
+                    "price": 3699,
+                    "read": 450,
+                    "write": 320
+                },
+                "p210": {
+                    "price": 4299,
+                    "read": 520,
+                    "write": 430
+                }
+            },
+            "samsung": {
+                "870evo": {
+                    "price": 7199,
+                    "read": 560,
+                    "write": 530
+                }
+            }
+        },
+        "1024": {
+            "kingston": {
+                "a400": {
+                    "price": 7599,
+                    "read": 500,
+                    "write": 450
+                },
+                "kc600": {
+                    "price": 12899,
+                    "read": 550,
+                    "write": 520
+                }
+            },
+            "netac": {
+                "sa500": {
+                    "price": 7399,
+                    "read": 530,
+                    "write": 475
+                },
+                "n600s": {
+                    "price": 8199,
+                    "read": 560,
+                    "write": 520
+                }
+            },
+            "patriot": {
+                "p210": {
+                    "price": 6999,
+                    "read": 520,
+                    "write": 430
+                }
+            },
+            "samsung": {
+                "870evo": {
+                    "price": 10999,
+                    "read": 560,
+                    "write": 530
+                }
+            }
+        }
+    }
+}

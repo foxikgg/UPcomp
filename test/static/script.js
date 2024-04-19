@@ -1,0 +1,1263 @@
+var cpu = {
+    "intel": {
+        "i3": {
+            "10gen": {
+                "10100f": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3600,
+                    "cache": 6,
+                    "tdp": 65,
+                    "released": "10.2020",
+                    "price": 7599
+                },
+                "10105": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3700,
+                    "cache": 6,
+                    "tdp": 65,
+                    "released": "03.2021",
+                    "price": 10899
+                },
+                "10105f": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3700,
+                    "cache": 6,
+                    "tdp": 65,
+                    "released": "03.2021",
+                    "price": 6099
+                }
+            },
+            "12gen": {
+                "12100": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3300,
+                    "cache": 12,
+                    "tdp": 89,
+                    "released": "01.2022",
+                    "price": 11799
+                },
+                "12100f": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3300,
+                    "cache": 12,
+                    "tdp": 89,
+                    "released": "01.2022",
+                    "price": 9999
+                }
+            },
+            "13gen": {
+                "13100": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3400,
+                    "cache": 12,
+                    "tdp": 89,
+                    "released": "01.2023",
+                    "price": 13199
+                },
+                "13100f": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3400,
+                    "cache": 12,
+                    "tdp": 89,
+                    "released": "01.2023",
+                    "price": 10399
+                }
+            },
+            "14gen": {
+                "14100": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3500,
+                    "cache": 12,
+                    "tdp": 110,
+                    "released": "01.2024",
+                    "price": 16499
+                },
+                "14100f": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3500,
+                    "cache": 12,
+                    "tdp": 110,
+                    "released": "01.2024",
+                    "price": 12999
+                }
+            }
+        },
+        "i5": {
+            "10gen": {
+                "10400": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2900,
+                    "cache": 12,
+                    "tdp": 65,
+                    "released": "04.2020",
+                    "price": 14199
+                },
+                "10400f": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2900,
+                    "cache": 12,
+                    "tdp": 65,
+                    "released": "04.2020",
+                    "price": 8699
+                },
+                "10500": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3100,
+                    "cache": 12,
+                    "tdp": 65,
+                    "released": "04.2020",
+                    "price": 16499
+                },
+                "10600k": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 4100,
+                    "cache": 12,
+                    "tdp": 125,
+                    "released": "04.2020",
+                    "price": 16999
+                },
+                "10600kf": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 4100,
+                    "cache": 12,
+                    "tdp": 125,
+                    "released": "04.2020",
+                    "price": 10999
+                }
+            },
+            "11gen": {
+                "11400": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2600,
+                    "cache": 12,
+                    "tdp": 65,
+                    "released": "03.2021",
+                    "price": 14899
+                },
+                "11400f": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2600,
+                    "cache": 12,
+                    "tdp": 125,
+                    "released": "03.2021",
+                    "price": 10999
+                },
+                "11600": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2800,
+                    "cache": 12,
+                    "tdp": 65,
+                    "released": "03.2021",
+                    "price": 15999
+                },
+                "11600k": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3900,
+                    "cache": 12,
+                    "tdp": 125,
+                    "released": "03.2021",
+                    "price": 19599
+                },
+                "11600kf": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3900,
+                    "cache": 12,
+                    "tdp": 125,
+                    "released": "03.2021",
+                    "price": 16999
+                }
+            },
+            "12gen": {
+                "12400": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2000,
+                    "cache": 18,
+                    "tdp": 117,
+                    "released": "01.2022",
+                    "price": 15999
+                },
+                "12400f": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2000,
+                    "cache": 18,
+                    "tdp": 117,
+                    "released": "01.2022",
+                    "price": 13499
+                },
+                "12500": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3000,
+                    "cache": 18,
+                    "tdp": 117,
+                    "released": "01.2022",
+                    "price": 22799
+                },
+                "12600": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3300,
+                    "cache": 18,
+                    "tdp": 117,
+                    "released": "01.2022",
+                    "price": 16999
+                },
+                "12600k": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3700,
+                    "cache": 20,
+                    "tdp": 150,
+                    "released": "11.2021",
+                    "price": 24799
+                },
+                "12600kf": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3700,
+                    "cache": 20,
+                    "tdp": 150,
+                    "released": "11.2021",
+                    "price": 23499
+                }
+            },
+            "13gen": {
+                "13400": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2500,
+                    "cache": 20,
+                    "tdp": 148,
+                    "released": "01.2023",
+                    "price": 21499
+                },
+                "13400f": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2500,
+                    "cache": 20,
+                    "tdp": 148,
+                    "released": "01.2023",
+                    "price": 20799
+                },
+                "13500": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2500,
+                    "cache": 24,
+                    "tdp": 154,
+                    "released": "01.2023",
+                    "price": 26999
+                },
+                "13600k": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3500,
+                    "cache": 24,
+                    "tdp": 181,
+                    "released": "10.2022",
+                    "price": 32299
+                },
+                "13600kf": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3500,
+                    "cache": 24,
+                    "tdp": 181,
+                    "released": "10.2022",
+                    "price": 31799
+                }
+            },
+            "14gen": {
+                "14400": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2500,
+                    "cache": 20,
+                    "tdp": 148,
+                    "released": "01.2024",
+                    "price": 25999
+                },
+                "14400f": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2500,
+                    "cache": 20,
+                    "tdp": 148,
+                    "released": "01.2024",
+                    "price": 22499
+                },
+                "14500": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 2600,
+                    "cache": 24,
+                    "tdp": 154,
+                    "released": "01.2024",
+                    "price": 28999
+                },
+                "14600k": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3500,
+                    "cache": 24,
+                    "tdp": 181,
+                    "released": "10.2023",
+                    "price": 35499
+                },
+                "14600kf": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3500,
+                    "cache": 24,
+                    "tdp": 181,
+                    "released": "10.2023",
+                    "price": 33999
+                }
+            }
+        },
+        "i7": {
+            "10gen": {
+                "10700": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2900,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "05.2020",
+                    "price": 19799
+                },
+                "10700f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2900,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "05.2020",
+                    "price": 19999
+                },
+                "10700k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3800,
+                    "cache": 16,
+                    "tdp": 125,
+                    "released": "05.2020",
+                    "price": 25999
+                },
+                "10700kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3800,
+                    "cache": 16,
+                    "tdp": 125,
+                    "released": "05.2020",
+                    "price": 20999
+                }
+            },
+            "11gen": {
+                "11700": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2500,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "03.2021",
+                    "price": 22499
+                },
+                "11700f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2500,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "03.2021",
+                    "price": 20799
+                },
+                "11700k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3600,
+                    "cache": 16,
+                    "tdp": 125,
+                    "released": "03.2021",
+                    "price": 30299
+                },
+                "11700kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3600,
+                    "cache": 16,
+                    "tdp": 125,
+                    "released": "03.2021",
+                    "price": 26299
+                }
+            },
+            "12gen": {
+                "12700": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2100,
+                    "cache": 25,
+                    "tdp": 180,
+                    "released": "01.2022",
+                    "price": 30499
+                },
+                "12700f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2100,
+                    "cache": 25,
+                    "tdp": 180,
+                    "released": "01.2022",
+                    "price": 30999
+                },
+                "12700k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3600,
+                    "cache": 25,
+                    "tdp": 190,
+                    "released": "11.2021",
+                    "price": 32499
+                },
+                "12700kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3600,
+                    "cache": 25,
+                    "tdp": 190,
+                    "released": "11.2021",
+                    "price": 31999
+                }
+            },
+            "13gen": {
+                "13700": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2100,
+                    "cache": 30,
+                    "tdp": 219,
+                    "released": "01.2023",
+                    "price": 38999
+                },
+                "13700f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2100,
+                    "cache": 30,
+                    "tdp": 219,
+                    "released": "01.2023",
+                    "price": 37499
+                },
+                "13700k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3400,
+                    "cache": 30,
+                    "tdp": 253,
+                    "released": "10.2022",
+                    "price": 42799
+                },
+                "13700kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3400,
+                    "cache": 30,
+                    "tdp": 253,
+                    "released": "10.2022",
+                    "price": 38999
+                }
+            },
+            "14gen": {
+                "14700": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2100,
+                    "cache": 33,
+                    "tdp": 219,
+                    "released": "01.2024",
+                    "price": 46999
+                },
+                "14700f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2100,
+                    "cache": 33,
+                    "tdp": 219,
+                    "released": "01.2024",
+                    "price": 45999
+                },
+                "14700k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3400,
+                    "cache": 33,
+                    "tdp": 253,
+                    "released": "10.2023",
+                    "price": 50999
+                },
+                "14700kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3400,
+                    "cache": 33,
+                    "tdp": 253,
+                    "released": "10.2023",
+                    "price": 49999
+                }
+            }
+        },
+        "i9": {
+            "10gen": {
+                "10900": {
+                    "cores": 10,
+                    "threads": 20,
+                    "clock": 2800,
+                    "cache": 20,
+                    "tdp": 65,
+                    "released": "04.2020",
+                    "price": 29999
+                },
+                "10900f": {
+                    "cores": 10,
+                    "threads": 20,
+                    "clock": 2800,
+                    "cache": 20,
+                    "tdp": 65,
+                    "released": "04.2020",
+                    "price": 29999
+                },
+                "10900k": {
+                    "cores": 10,
+                    "threads": 20,
+                    "clock": 3700,
+                    "cache": 20,
+                    "tdp": 125,
+                    "released": "04.2020",
+                    "price": 35799
+                },
+                "10900kf": {
+                    "cores": 10,
+                    "threads": 20,
+                    "clock": 3700,
+                    "cache": 20,
+                    "tdp": 125,
+                    "released": "04.2020",
+                    "price": 35999
+                }
+            },
+            "11gen": {
+                "11900": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2500,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "03.2021",
+                    "price": 28799
+                },
+                "11900f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2500,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "03.2021",
+                    "price": 24999
+                },
+                "11900k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3500,
+                    "cache": 16,
+                    "tdp": 125,
+                    "released": "03.2021",
+                    "price": 26999
+                },
+                "11900kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3500,
+                    "cache": 16,
+                    "tdp": 125,
+                    "released": "03.2021",
+                    "price": 25299
+                }
+            },
+            "12gen": {
+                "12900": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2400,
+                    "cache": 30,
+                    "tdp": 202,
+                    "released": "01.2022",
+                    "price": 35499
+                },
+                "12900f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2400,
+                    "cache": 30,
+                    "tdp": 202,
+                    "released": "01.2022",
+                    "price": 42499
+                },
+                "12900k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3200,
+                    "cache": 30,
+                    "tdp": 241,
+                    "released": "11.2021",
+                    "price": 43799
+                },
+                "12900kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3200,
+                    "cache": 30,
+                    "tdp": 241,
+                    "released": "11.2021",
+                    "price": 41499
+                }
+            },
+            "13gen": {
+                "13900": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2000,
+                    "cache": 36,
+                    "tdp": 219,
+                    "released": "01.2023",
+                    "price": 55999
+                },
+                "13900f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2000,
+                    "cache": 36,
+                    "tdp": 219,
+                    "released": "01.2023",
+                    "price": 58799
+                },
+                "13900k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3000,
+                    "cache": 36,
+                    "tdp": 253,
+                    "released": "10.2022",
+                    "price": 61999
+                },
+                "13900kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3000,
+                    "cache": 36,
+                    "tdp": 253,
+                    "released": "10.2022",
+                    "price": 60999
+                },
+                "13900ks": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3200,
+                    "cache": 36,
+                    "tdp": 253,
+                    "released": "01.2023",
+                    "price": 82499
+                }
+            },
+            "14gen": {
+                "14900": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2000,
+                    "cache": 36,
+                    "tdp": 219,
+                    "released": "01.2024",
+                    "price": 64999
+                },
+                "14900f": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 2000,
+                    "cache": 36,
+                    "tdp": 219,
+                    "released": "01.2024",
+                    "price": 60999
+                },
+                "14900k": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3200,
+                    "cache": 36,
+                    "tdp": 253,
+                    "released": "10.2023",
+                    "price": 72999
+                },
+                "14900kf": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3200,
+                    "cache": 36,
+                    "tdp": 253,
+                    "released": "10.2023",
+                    "price": 64999
+                }
+            }
+        }
+    },
+    "amd": {
+        "r3": {
+            "zen": {
+                "1200": {
+                    "cores": 4,
+                    "threads": 4,
+                    "clock": 3100,
+                    "cache": 8,
+                    "tdp": 65,
+                    "released": "07.2017",
+                    "price": 2599
+                },
+                "1300x": {
+                    "cores": 4,
+                    "threads": 4,
+                    "clock": 3500,
+                    "cache": 8,
+                    "tdp": 65,
+                    "released": "07.2017",
+                    "price": 2999
+                }
+            },
+            "zen+": {
+                "1200af": {
+                    "cores": 4,
+                    "threads": 4,
+                    "clock": 3100,
+                    "cache": 8,
+                    "tdp": 65,
+                    "released": "09.2018",
+                    "price": 2599
+                },
+                "2300x": {
+                    "cores": 4,
+                    "threads": 4,
+                    "clock": 3500,
+                    "cache": 8,
+                    "tdp": 65,
+                    "released": "09.2018",
+                    "price": 2999
+                }
+            },
+            "zen2": {
+                "3100": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3600,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "04.2020",
+                    "price": 3999
+                },
+                "3300x": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3800,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "04.2020",
+                    "price": 4999
+                },
+                "3500": {
+                    "cores": 6,
+                    "threads": 6,
+                    "clock": 3600,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "09.2019",
+                    "price": 3999
+                },
+                "3500x": {
+                    "cores": 6,
+                    "threads": 6,
+                    "clock": 3600,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "09.2019",
+                    "price": 4499
+                }
+            }
+        },
+        "r5": {
+            "zen": {
+                "1400": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3200,
+                    "cache": 8,
+                    "tdp": 65,
+                    "released": "04.2017",
+                    "price": 2999
+                },
+                "1500x": {
+                    "cores": 4,
+                    "threads": 8,
+                    "clock": 3500,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "04.2017",
+                    "price": 2999
+                },
+                "1600": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3200,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "04.2017",
+                    "price": 3499
+                },
+                "1600x": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3600,
+                    "cache": 16,
+                    "tdp": 95,
+                    "released": "04.2017",
+                    "price": 3999
+                }
+            },
+            "zen+": {
+                "1600af": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3100,
+                    "cache": 16,
+                    "tdp": 45,
+                    "released": "09.2018",
+                    "price": 3999
+                },
+                "2600": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3400,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "04.2018",
+                    "price": 4499
+                },
+                "2600x": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3600,
+                    "cache": 16,
+                    "tdp": 95,
+                    "released": "04.2018",
+                    "price": 4999
+                }
+            },
+            "zen2": {
+                "3600": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3600,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "07.2019",
+                    "price": 8999
+                },
+                "3600x": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3800,
+                    "cache": 32,
+                    "tdp": 95,
+                    "released": "07.2019",
+                    "price": 9799
+                }
+            },
+            "zen3": {
+                "5500": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3600,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "04.2022",
+                    "price": 9199
+                },
+                "5600": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3500,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "04.2022",
+                    "price": 10999
+                },
+                "5600x": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3700,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "11.2020",
+                    "price": 14499
+                }
+            },
+            "zen4": {
+                "7500f": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3700,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "07.2023",
+                    "price": 18499
+                },
+                "7600": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 3800,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "01.2023",
+                    "price": 19999
+                },
+                "7600x": {
+                    "cores": 6,
+                    "threads": 12,
+                    "clock": 4700,
+                    "cache": 32,
+                    "tdp": 105,
+                    "released": "09.2022",
+                    "price": 22999
+                }
+            }
+        },
+        "r7": {
+            "zen": {
+                "1700": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3000,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "03.2017",
+                    "price": 3499
+                },
+                "1700x": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3400,
+                    "cache": 16,
+                    "tdp": 95,
+                    "released": "03.2017",
+                    "price": 3999
+                },
+                "1800x": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3600,
+                    "cache": 16,
+                    "tdp": 95,
+                    "released": "03.2017",
+                    "price": 5999
+                }
+            },
+            "zen+": {
+                "2700": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3200,
+                    "cache": 16,
+                    "tdp": 65,
+                    "released": "09.2018",
+                    "price": 4999
+                },
+                "2700x": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3700,
+                    "cache": 16,
+                    "tdp": 105,
+                    "released": "04.2018",
+                    "price": 5999
+                }
+            },
+            "zen2": {
+                "3700x": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3600,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "07.2019",
+                    "price": 13999
+                },
+                "3800x": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3900,
+                    "cache": 32,
+                    "tdp": 105,
+                    "released": "07.2019",
+                    "price": 19999
+                },
+                "3800xt": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3900,
+                    "cache": 32,
+                    "tdp": 105,
+                    "released": "07.2020",
+                    "price": 20999
+                }
+            },
+            "zen3": {
+                "5700x": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3400,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "04.2022",
+                    "price": 17799
+                },
+                "5800": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3400,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "01.2021",
+                    "price": 19899
+                },
+                "5800x": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3800,
+                    "cache": 32,
+                    "tdp": 105,
+                    "released": "11.2020",
+                    "price": 20999
+                },
+                "5800x3d": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3400,
+                    "cache": 96,
+                    "tdp": 105,
+                    "released": "04.2022",
+                    "price": 39299
+                }
+            },
+            "zen4": {
+                "7700": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 3800,
+                    "cache": 32,
+                    "tdp": 65,
+                    "released": "01.2023",
+                    "price": 32299
+                },
+                "7700x": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 4500,
+                    "cache": 32,
+                    "tdp": 105,
+                    "released": "09.2022",
+                    "price": 38499
+                },
+                "7800x3d": {
+                    "cores": 8,
+                    "threads": 16,
+                    "clock": 4200,
+                    "cache": 96,
+                    "tdp": 120,
+                    "released": "04.2023",
+                    "price": 39999
+                }
+            }
+        },
+        "r9": {
+            "zen2": {
+                "3900x": {
+                    "cores": 12,
+                    "threads": 24,
+                    "clock": 3800,
+                    "cache": 64,
+                    "tdp": 105,
+                    "released": "07.2019",
+                    "price": 21999
+                },
+                "3900xt": {
+                    "cores": 12,
+                    "threads": 24,
+                    "clock": 3800,
+                    "cache": 64,
+                    "tdp": 105,
+                    "released": "07.2020",
+                    "price": 23999
+                },
+                "3950x": {
+                    "cores": 16,
+                    "threads": 32,
+                    "clock": 3500,
+                    "cache": 64,
+                    "tdp": 105,
+                    "released": "11.2019",
+                    "price": 30999
+                }
+            },
+            "zen3": {
+                "5900": {
+                    "cores": 12,
+                    "threads": 24,
+                    "clock": 3000,
+                    "cache": 64,
+                    "tdp": 65,
+                    "released": "01.2021",
+                    "price": 30999
+                },
+                "5900x": {
+                    "cores": 12,
+                    "threads": 24,
+                    "clock": 3700,
+                    "cache": 64,
+                    "tdp": 105,
+                    "released": "11.2020",
+                    "price": 33999
+                },
+                "5950x": {
+                    "cores": 16,
+                    "threads": 32,
+                    "clock": 3400,
+                    "cache": 64,
+                    "tdp": 105,
+                    "released": "11.2020",
+                    "price": 47499
+                }
+            },
+            "zen4": {
+                "7900": {
+                    "cores": 12,
+                    "threads": 24,
+                    "clock": 3700,
+                    "cache": 64,
+                    "tdp": 65,
+                    "released": "01.2023",
+                    "price": 46999
+                },
+                "7900x": {
+                    "cores": 12,
+                    "threads": 24,
+                    "clock": 4700,
+                    "cache": 64,
+                    "tdp": 170,
+                    "released": "09.2022",
+                    "price": 46999
+                },
+                "7900x3d": {
+                    "cores": 12,
+                    "threads": 24,
+                    "clock": 4400,
+                    "cache": 128,
+                    "tdp": 120,
+                    "released": "01.2023",
+                    "price": 55999
+                },
+                "7950x": {
+                    "cores": 16,
+                    "threads": 32,
+                    "clock": 4500,
+                    "cache": 64,
+                    "tdp": 170,
+                    "released": "09.2022",
+                    "price": 55999
+                },
+                "7950x3d": {
+                    "cores": 16,
+                    "threads": 32,
+                    "clock": 4200,
+                    "cache": 128,
+                    "tdp": 120,
+                    "released": "01.2023",
+                    "price": 55999
+                }
+            }
+        }
+    }
+};
+
+// Получаем ссылку на кнопки
+var intelButton = document.getElementById("intelButton");
+var amdButton = document.getElementById("amdButton");
+
+// Функция для создания кнопок
+function createButtons(data, parentDiv) {
+    // Создаем новый div для кнопок
+    var newDiv = document.createElement("div");
+    newDiv.style.width = "200px";
+    newDiv.style.border = "1px solid black";
+
+    // Добавляем новые кнопки для каждого элемента в данных
+    for (var item in data) {
+        var newButton = document.createElement("button");
+        newButton.innerHTML = item;
+        newButton.addEventListener("click", function() {
+            createButtons(data[item], newDiv);
+        });
+        newDiv.appendChild(newButton);
+    }
+
+    // Добавляем новый div в родительский div
+    parentDiv.appendChild(newDiv);
+}
+
+// Добавляем обработчик событий для нажатия
+intelButton.addEventListener("click", function() {
+    // Получаем ссылку на div
+    var cpuButtons = document.getElementById("cpuButtons");
+
+    // Очищаем div
+    cpuButtons.innerHTML = "";
+
+    createButtons(cpu.intel, cpuButtons);
+});
+
+amdButton.addEventListener("click", function() {
+    // Получаем ссылку на div
+    var cpuButtons = document.getElementById("cpuButtons");
+
+    // Очищаем div
+    cpuButtons.innerHTML = "";
+
+    createButtons(cpu.amd, cpuButtons);
+});

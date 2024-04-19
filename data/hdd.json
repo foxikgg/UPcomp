@@ -1,0 +1,44 @@
+{
+    "1": {
+        "seagate": {
+            "price": 6199,
+            "speed": 7200
+        },
+        "toshiba": {
+            "price": 5799,
+            "speed": 7200
+        },
+        "wd": {
+            "price": 6299,
+            "speed": 7200
+        }
+    },
+    "2": {
+        "seagate": {
+            "price": 7299,
+            "speed": 7200
+        },
+        "toshiba": {
+            "price": 6999,
+            "speed": 7200
+        },
+        "wd": {
+            "price": 8799,
+            "speed": 5400
+        }
+    },
+    "4": {
+        "seagate": {
+            "price": 9999,
+            "speed": 5400
+        },
+        "toshiba": {
+            "price": 10799,
+            "speed": 5400
+        },
+        "wd": {
+            "price": 11599,
+            "speed": 5400
+        }
+    }
+}

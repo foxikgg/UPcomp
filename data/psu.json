@@ -1,0 +1,315 @@
+{
+    "500": {
+        "bequiet": {
+            "9": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 4999
+            },
+            "11": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 8199
+            }
+        },
+        "chieftec": {
+            "proton": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 5199
+            },
+            "core": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 6499
+            }
+        },
+        "msi": {
+            "a500dn": {
+                "certificate": "default",
+                "modular": false,
+                "price": 5299
+            }
+        }
+    },
+    "550": {
+        "bequiet": {
+            "10": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 7699
+            },
+            "12": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 10999
+            }
+        },
+        "coolermaster": {
+            "mwev2": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 7299
+            }
+        },
+        "deepcool": {
+            "pl550d": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 5499
+            }
+        },
+        "montech": {
+            "beta": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 4399
+            },
+            "gamma2": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 6699
+            },
+            "century": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 7499
+            }
+        }
+    },
+    "600": {
+        "bequiet": {
+            "9": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 5999
+            },
+            "11": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 10199
+            }
+        },
+        "chieftec": {
+            "proton": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 5599
+            },
+            "core": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 7099
+            }
+        },
+        "msi": {
+            "a600dn": {
+                "certificate": "default",
+                "modular": false,
+                "price": 5499
+            }
+        }
+    },
+    "650": {
+        "bequiet": {
+            "10": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 9299
+            }
+        },
+        "chieftec": {
+            "photon": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 8899
+            },
+            "polaris": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 10899
+            }
+        },
+        "coolermaster": {
+            "mwev2": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 8199
+            }
+        },
+        "deepcool": {
+            "pl650d": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 6299
+            }
+        },
+        "msi": {
+            "a650bn": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 5699
+            },
+            "a650gf": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 9999
+            }
+        },
+        "montech": {
+            "beta": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 4999
+            },
+            "gamma2": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 7099
+            },
+            "century": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 8799
+            }
+        },
+        "thermaltake": {
+            "gf1": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 11599
+            }
+        },
+        "xpg": {
+            "kyber": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 8899
+            }
+        }
+    },
+    "700": {
+        "bequiet": {
+            "9": {
+                "certificate": "bronze",
+                "modular": false,
+                "price": 6999
+            },
+            "11": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 10999
+            }
+        },
+        "chieftec": {
+            "core": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 6999
+            }
+        },
+        "thermaltake": {
+            "gx1": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 10799
+            }
+        }
+    },
+    "850": {
+        "bequiet": {
+            "10": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 14799
+            },
+            "12": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 19499
+            }
+        },
+        "chieftec": {
+            "polaris": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 13399
+            }
+        },
+        "coolermaster": {
+            "mwev2": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 11699
+            }
+        },
+        "montech": {
+            "century": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 10899
+            },
+            "titan": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 14499
+            }
+        },
+        "thermaltake": {
+            "gf": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 11499
+            }
+        },
+        "xpg": {
+            "kyber": {
+                "certificate": "gold",
+                "modular": false,
+                "price": 11599
+            }
+        }
+    },
+    "900": {
+        "bequiet": {
+            "12": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 24999
+            },
+            "13": {
+                "certificate": "titanium",
+                "modular": true,
+                "price": 40299
+            }
+        },
+        "chieftec": {},
+        "coolermaster": {},
+        "montech": {
+            "titan": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 17699
+            }
+        },
+        "thermaltake": {
+            "sfx": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 21199
+            }
+        },
+        "xpg": {
+            "corereactor2": {
+                "certificate": "gold",
+                "modular": true,
+                "price": 18199
+            },
+            "cybercore2": {
+                "certificate": "platinum",
+                "modular": true,
+                "price": 20199
+            }
+        }
+    }
+}

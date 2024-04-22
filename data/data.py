@@ -3917,8 +3917,6 @@ psu = {  # psu[power][manufacturer][model]: certificate, modular, price
                 'price': 40299
             }
         },
-        'chieftec': {},
-        'coolermaster': {},
         'montech': {
             'titan': {
                 'certificate': 'gold',
@@ -3946,4 +3944,8 @@ psu = {  # psu[power][manufacturer][model]: certificate, modular, price
             }
         }
     }
+}
+
+readable_format = {
+    '10100f': 'Intel Core i3-10100f'
 }

@@ -1217,22 +1217,27 @@ var cpu = {
 };
 
 // Получаем ссылку на кнопки
-var intelButton = document.getElementById("intelButton");
-var amdButton = document.getElementById("amdButton");
+var Intel_Button_CPU = document.getElementById("Intel_Button_CPU");
+var AMD_Button_CPU = document.getElementById("AMD_Button_CPU");
 
 // Функция для создания кнопок
-function createButtons(data, parentDiv) {
+function createButtons(data, parentDiv, path = '') {
+    // Очищаем div перед добавлением новых кнопок
+    parentDiv.innerHTML = "";
+
     // Создаем новый div для кнопок
     var newDiv = document.createElement("div");
-    newDiv.style.width = "200px";
-    newDiv.style.border = "1px solid black";
+    newDiv.style.width = "300px";
 
     // Добавляем новые кнопки для каждого элемента в данных
     for (var item in data) {
         var newButton = document.createElement("button");
         newButton.innerHTML = item;
+        newButton.className = "accessories_option_btn"; // Добавляем класс
         newButton.addEventListener("click", function() {
-            createButtons(data[item], newDiv);
+            var newPath = path + ' ' + this.innerHTML;
+            document.getElementById('selectedCpu').innerHTML = 'Вы выбрали:' + newPath + ' core';
+            createButtons(data[item], newDiv, newPath);
         });
         newDiv.appendChild(newButton);
     }
@@ -1241,10 +1246,13 @@ function createButtons(data, parentDiv) {
     parentDiv.appendChild(newDiv);
 }
 
+
+
+
 // Добавляем обработчик событий для нажатия
-intelButton.addEventListener("click", function() {
+Intel_Button_CPU.addEventListener("click", function() {
     // Получаем ссылку на div
-    var cpuButtons = document.getElementById("cpuButtons");
+    var cpuButtons = document.getElementById("cpuButtons_cpu");
 
     // Очищаем div
     cpuButtons.innerHTML = "";
@@ -1252,12 +1260,23 @@ intelButton.addEventListener("click", function() {
     createButtons(cpu.intel, cpuButtons);
 });
 
-amdButton.addEventListener("click", function() {
+AMD_Button_CPU.addEventListener("click", function() {
     // Получаем ссылку на div
-    var cpuButtons = document.getElementById("cpuButtons");
+    var cpuButtons = document.getElementById("cpuButtons_cpu");
 
     // Очищаем div
     cpuButtons.innerHTML = "";
 
     createButtons(cpu.amd, cpuButtons);
 });
+
+Intel_Button_CPU.addEventListener("click", function() {
+    this.classList.add("button-pressed-intel-cpu"); // Добавляем класс к нажатой кнопке
+    AMD_Button_CPU.classList.remove("button-pressed-amd-cpu"); // Удаляем класс с другой кнопки
+});
+
+AMD_Button_CPU.addEventListener("click", function() {
+    this.classList.add("button-pressed-amd-cpu"); // Добавляем класс к нажатой кнопке
+    Intel_Button_CPU.classList.remove("button-pressed-intel-cpu"); // Удаляем класс с другой кнопки
+});
+

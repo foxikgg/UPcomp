@@ -5,6 +5,14 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
+:target:before {
+    content: "";
+    display: block;
+    height: 80px; /* высота вашей шапки */
+    margin: 40px 0 0; /* отрицательный отступ равный высоте вашей шапки */
+}
+
+
 
 .header {
     display: flex;
@@ -217,19 +225,32 @@ body {
     gap: 25px;
 }
 
-.accessories_img {
+.selection_parameters {
+    align-items: center;
+}
 
-    
+.accessories_img {
+    padding: 50px;
+    width: 50%;
+    height: 100%;
+}
+
+.accessories_cpu_img {
     padding: 50px;
     width: 50%;
     height: 100%;
 }
 
 .accessories_maker_intel {
+    background-color: #FFFFFF;
     background-size: cover;
+    box-sizing: border-box;
+    border: 0px solid #FFFFFF;
     width: 200px;
     height: auto;
     border-radius: 1000px;
+
+    margin
 }
 .accessories_maker_intel:hover {
     background-color: #E9E9FD;
@@ -238,25 +259,58 @@ body {
 }
 
 .accessories_maker_amd {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    border: 0px solid #FFFFFF;
     background-size: cover;
     width: 200px;
     height: auto;
     border-radius: 1000px;
 }
-.accessories_maker_amd:hover {
+.accessories_maker_amd:hover  {
     background-color: #D1F7E9;
     /* box-sizing: border-box;
     border: 3px solid #1AD993; */
 }
 
+.button-pressed-intel-cpu {
+    box-sizing: border-box;
+    border: 3px solid #9393F6;
+    background-color: #E9E9FD;
+}
 
+.button-pressed-amd-cpu {
+    box-sizing: border-box;
+    border: 3px solid #1AD993;
+    background-color: #D1F7E9;
+}
+
+
+.button-pressed-intel-gpu {
+    box-sizing: border-box;
+    border: 3px solid #9393F6;
+    background-color: #E9E9FD;
+}
+
+.button-pressed-amd-gpu {
+    box-sizing: border-box;
+    border: 3px solid #1AD993;
+    background-color: #D1F7E9;
+}
+
+.button-pressed-nvidia-gpu {
+    box-sizing: border-box;
+    border: 3px solid #1AD993;
+    background-color: #D1F7E9;
+}
 
 .accessories_var {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 100%; /* Занимает всю ширину родительского div */
+    display: flex; /* Используем flexbox для центрирования содержимого */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
 }
+
 
 .accessories_hint {
     width: 100%;

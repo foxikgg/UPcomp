@@ -12,9 +12,9 @@
 <div class="header">
     <a href=""><img src="{{ url_for('static', filename='vector/logo.svg') }}" alt="Logo" class="logo_cap"></a>
     <div class="menu">
-        <a class="menu-item" href="#content">О нас</a>
+        <a class="menu-item" href="#contents">О нас</a>
         <a class="menu-item" href="#top_builds">Топ лучших</a>
-        <a class="menu-item" href="#build_pc">Собрать пк</a>
+        <a class="menu-item" href="#accessories_blocks">Собрать пк</a>
         <div class="auth">
             <a href=""><img src="{{ url_for('static', filename='vector/ico/profile.svg') }}" alt="Icon"
                             class="icon"></a>
@@ -27,17 +27,17 @@
 <div class="content">
     <div class="text_block_about">
         <div class="text_block_about_t">
-            <a id="content"> <img src="{{ url_for('static', filename='vector/logo.svg') }}" alt="Logo" class="logo"> </a>
+            <a> <img src="{{ url_for('static', filename='vector/logo.svg') }}" alt="Logo" class="logo"> </a>
             <p class="h2">Интерактивный сервис для создания, обсуждения и покупки сборок ПК</p>
         </div>
         <button class="btn1">Собрать</button>
     </div>
-    <img src="{{ url_for('static', filename='image/comp_bl1.png') }}" alt="Image" class="image_block">
+    <img id="contents" src="{{ url_for('static', filename='image/comp_bl1.png') }}" alt="Image" class="image_block">
 </div>
 
 <!-- Топ сборок -->
 <div class="top_builds">
-    <h1 class="text_h1" id="top_builds">Топ сборок</h1>
+    <h1 id="top_builds" class="text_h1">Топ сборок</h1>
     <div class="top_builds_all_block">
         <dev class="top_builds_block">
             <img src="{{ url_for('static', filename='image/top_builds/UP_lite.png') }}" alt="Image"
@@ -146,27 +146,41 @@
 </div>
 
 <!-- Сборка собственного пк -->
-<h1 class="text_h1" id="build_pc">Собери свой пк</h1>
 <div>
+    <h1 class="text_h1" id="accessories_blocks">Собери свой пк</h1>
     <h2 class="accessories_h1">Процессор</h2>
     <div class="accessories_block">
         <img src="{{ url_for('static', filename='image/accessories/cpu.png') }}" alt="Accessories"
              class="accessories_img">
         <div>
-            <div>
-                <img src="{{ url_for('static', filename='image/accessories/cpu_intel.png') }}" alt="CPU"
-                     class="accessories_maker_intel">
-                <img src="static/image/accessories/cpu_amd.png" alt="CPU" class="accessories_maker_amd">
-            </div>
-            <div class="accessories_var">
-                <p class="accessories_hint">Серия</p>
-                <div>
-                    <button class="accessories_option_btn">i3</button>
-                    <button class="accessories_option_btn">i5</button>
-                    <button class="accessories_option_btn">i7</button>
-                </div>
+            <div class="selection_parameters">
+                <button id="Intel_Button_CPU" class="accessories_maker_intel">
+                    <img src="{{ url_for('static', filename='image/accessories/cpu_intel.png') }}" alt="CPU"
+                         class="accessories_cpu_img">
+                </button>
+                <button id="AMD_Button_CPU" class="accessories_maker_amd">
+                     <img src="static/image/accessories/cpu_amd.png" alt="CPU" class="accessories_cpu_img">
+                </button>
+                <div id="cpuButtons_cpu" class="accessories_var"></div>
+                <p id="selectedCpu">Вы выбрали: </p>
                 <div class="accessories_line"></div>
             </div>
+            <div class="selection_parameters">
+                <button id="Intel_Button_GPU" class="accessories_maker_intel">
+                    <img src="{{ url_for('static', filename='image/accessories/cpu_intel.png') }}" alt="CPU"
+                         class="accessories_cpu_img">
+                </button>
+                <button id="AMD_Button_GPU" class="accessories_maker_amd">
+                     <img src="static/image/accessories/cpu_amd.png" alt="CPU" class="accessories_cpu_img">
+                </button>
+                <button id="NVIDIA_Button_GPU" class="accessories_maker_amd">
+                     <img src="static/image/accessories/gpu_nvidia.png" alt="CPU" class="accessories_cpu_img">
+                </button>
+                <div id="cpuButtons" class="accessories_var"></div>
+                <p id="selectedCpu">Вы выбрали: </p>
+                <div class="accessories_line"></div>
+            </div>
+        </div>
         </div>
     </div>
 </div>
@@ -180,5 +194,10 @@
         <a class="menu_item_footer" href="">Топ лучших</a>
     </div>
 </div>
+
+<script src="{{ url_for('static', filename='script/Accessories_CPU.js') }}"></script>
+<script src="{{ url_for('static', filename='script/Accessories_GPU.js') }}"></script>
+
 </body>
+
 </html>

@@ -1,4 +1,5 @@
-var cpu = {
+// Объект с данными о процессорах различных брендов
+var cpuData = {
     "intel": {
         "i3": {
             "10gen": {
@@ -12,6 +13,7 @@ var cpu = {
                     "price": 7599
                 },
                 "10105": {
+                    "name": "Intel Core i3-10105",
                     "cores": 4,
                     "threads": 8,
                     "clock": 3700,
@@ -1216,59 +1218,70 @@ var cpu = {
     }
 };
 
-// Получаем ссылку на кнопки
-var Intel_Button_CPU = document.getElementById("Intel_Button_CPU");
-var AMD_Button_CPU = document.getElementById("AMD_Button_CPU");
 
-// Функция для создания кнопок
-function createButtons(data, parentDiv, path = '') {
-    // Очищаем div перед добавлением новых кнопок
-    parentDiv.innerHTML = "";
+function showCPUs(brand) {
+    var Buttons_cpuDiv = document.getElementById("Buttons_cpu");
+    Buttons_cpuDiv.innerHTML = "";
+    Buttons_cpuDiv.classList.add("buttons-cpu-container"); // Добавляем класс для контейнера
 
-    // Создаем новый div для кнопок
-    var newDiv = document.createElement("div");
-    newDiv.style.width = "300px";
+    Object.keys(cpuData[brand]).forEach(cpu => {
+        var btn = document.createElement("button_cpu");
+        btn.className = "btn_cpu";
+        btn.textContent = cpu;
+        btn.onclick = function() { showGenerations(brand, cpu); };
+        Buttons_cpuDiv.appendChild(btn);
+    });
 
-    // Добавляем новые кнопки для каждого элемента в данных
-    for (var item in data) {
-        var newButton = document.createElement("button");
-        newButton.innerHTML = item;
-        newButton.className = "accessories_option_btn"; // Добавляем класс
-        newButton.addEventListener("click", function() {
-            var newPath = path + ' ' + this.innerHTML;
-            document.getElementById('selectedCpu').innerHTML = 'Вы выбрали:' + newPath + ' core';
-            createButtons(data[item], newDiv, newPath);
-        });
-        newDiv.appendChild(newButton);
-    }
+    selectedCPU = "";
+    document.getElementById("Info_cpu").innerHTML = "";
+}
 
-    // Добавляем новый div в родительский div
-    parentDiv.appendChild(newDiv);
+function showGenerations(brand, cpu) {
+    var Info_cpuDiv = document.getElementById("Info_cpu");
+    Info_cpuDiv.innerHTML = "";
+    Info_cpuDiv.classList.add("buttons-cpu-container"); // Добавляем класс для контейнера
+
+    Object.keys(cpuData[brand][cpu]).forEach(gen => {
+        var btn = document.createElement("button_cpu");
+        btn.className = "btn_cpu";
+        btn.textContent = gen;
+        btn.onclick = function() { showModels(brand, cpu, gen); };
+        Info_cpuDiv.appendChild(btn);
+    });
+
+    selectedCPU = cpu;
+}
+
+function showModels(brand, cpu, gen) {
+    var Info_cpuDiv = document.getElementById("Info_cpu");
+    Info_cpuDiv.innerHTML = "";
+    Info_cpuDiv.classList.add("buttons-cpu-container"); // Добавляем класс для контейнера
+
+    Object.keys(cpuData[brand][cpu][gen]).forEach(model => {
+        var btn = document.createElement("button_cpu");
+        btn.className = "btn_cpu";
+        btn.textContent = model;
+        btn.onclick = function() { showPrice(brand, cpu, gen, model); };
+        Info_cpuDiv.appendChild(btn);
+    });
+
+    selectedCPU = gen;
+}
+
+function showPrice(brand, cpu, gen, model) {
+    var price = cpuData[brand][cpu][gen][model]["price"];
+    var modelDescription = cpuData[brand][cpu][gen][model]["name"]; // Получаем описание модели из словаря
+
+    selectedCPU = model;
+
+    document.getElementById("selectedText1_cpu").textContent = modelDescription;
+    document.getElementById("selectedText2_cpu").textContent = `${price} ₽`;
 }
 
 
 
-
-// Добавляем обработчик событий для нажатия
-Intel_Button_CPU.addEventListener("click", function() {
-    // Получаем ссылку на div
-    var cpuButtons = document.getElementById("cpuButtons_cpu");
-
-    // Очищаем div
-    cpuButtons.innerHTML = "";
-
-    createButtons(cpu.intel, cpuButtons);
-});
-
-AMD_Button_CPU.addEventListener("click", function() {
-    // Получаем ссылку на div
-    var cpuButtons = document.getElementById("cpuButtons_cpu");
-
-    // Очищаем div
-    cpuButtons.innerHTML = "";
-
-    createButtons(cpu.amd, cpuButtons);
-});
+var Intel_Button_CPU = document.getElementById("Intel_Button_CPU");
+var AMD_Button_CPU = document.getElementById("AMD_Button_CPU");
 
 Intel_Button_CPU.addEventListener("click", function() {
     this.classList.add("button-pressed-intel-cpu"); // Добавляем класс к нажатой кнопке
@@ -1279,4 +1292,3 @@ AMD_Button_CPU.addEventListener("click", function() {
     this.classList.add("button-pressed-amd-cpu"); // Добавляем класс к нажатой кнопке
     Intel_Button_CPU.classList.remove("button-pressed-intel-cpu"); // Удаляем класс с другой кнопки
 });
-

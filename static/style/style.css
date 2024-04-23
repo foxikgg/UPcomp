@@ -284,8 +284,7 @@ body {
     border: 3px solid #1AD993;
     background-color: #D1F7E9;
 }
-
-
+/*
 .button-pressed-intel-gpu {
     box-sizing: border-box;
     border: 3px solid #9393F6;
@@ -303,18 +302,85 @@ body {
     border: 3px solid #1AD993;
     background-color: #D1F7E9;
 }
+*/
+
+.btn_intel {
+    weight: 10px
+    height: 10px;
+    margin: 5px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+
+}
+.btn_intel:hover {
+    background-color: #E9E9FD;
+}
+
+.btn_amd {
+    weight: 10px
+    height: 10px;
+    margin: 5px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+
+}
+.btn_amd:hover {
+    background-color: #E9E9FD;
+}
+
+
+.buttons-cpu-container {
+    font-size:12px;
+    display: flex;
+    flex-wrap: wrap; /* Перенос элементов на новую строку, если ширина контейнера меньше ширины элементов */
+    max-width: 1000px; /* Максимальная ширина контейнера */
+}
+
+.btn_cpu {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+
+    border-radius: 100px;
+    border: 0px;
+
+    color: #0D0D0D;
+    background-color: #FFFFFF;
+
+}
+.btn_cpu:hover {
+    background-color: #E9E9FD;
+    border: 30px;
+    border-color: #9393F6;
+}
+
+.btn {
+    gap: 25px;
+    padding: 15px;
+    max-width: 450px;
+}
 
 .accessories_var {
     width: 100%; /* Занимает всю ширину родительского div */
     display: flex; /* Используем flexbox для центрирования содержимого */
-    justify-content: center; /* Центрируем содержимое по горизонтали */
+
     align-items: center; /* Центрируем содержимое по вертикали */
 }
 
 
 .accessories_hint {
-    width: 100%;
-    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
     color: #025949;
 }
 

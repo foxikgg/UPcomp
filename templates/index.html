@@ -148,41 +148,36 @@
 <!-- Сборка собственного пк -->
 <div>
     <h1 class="text_h1" id="accessories_blocks">Собери свой пк</h1>
-    <h2 class="accessories_h1">Процессор</h2>
-    <div class="accessories_block">
-        <img src="{{ url_for('static', filename='image/accessories/cpu.png') }}" alt="Accessories"
-             class="accessories_img">
-        <div>
-            <div class="selection_parameters">
-                <button id="Intel_Button_CPU" class="accessories_maker_intel">
-                    <img src="{{ url_for('static', filename='image/accessories/cpu_intel.png') }}" alt="CPU"
-                         class="accessories_cpu_img">
-                </button>
-                <button id="AMD_Button_CPU" class="accessories_maker_amd">
-                     <img src="static/image/accessories/cpu_amd.png" alt="CPU" class="accessories_cpu_img">
-                </button>
-                <div id="cpuButtons_cpu" class="accessories_var"></div>
-                <p id="selectedCpu">Вы выбрали: </p>
+    <div>
+        <h2 class="accessories_h1">Процессор</h2>
+        <div class="accessories_block">
+            <img src="{{ url_for('static', filename='image/accessories/cpu.png') }}" alt="Accessories"
+                 class="accessories_img">
+            <div class="accessories_hint">
+                <div id="buttons" class="accessories_var">
+
+                    <button class="accessories_maker_intel" onclick="showCPUs('intel')" id="Intel_Button_CPU">
+                        <img src="{{ url_for('static', filename='image/accessories/cpu_intel.png') }}" alt="CPU"
+                         class="accessories_cpu_img"></button>
+
+                    <button class="accessories_maker_amd" onclick="showCPUs('amd')" id="AMD_Button_CPU">
+                        <img src="static/image/accessories/cpu_amd.png" alt="CPU" class="accessories_cpu_img">
+                    </button>
+                </div>
+
+                <div id="Buttons_cpu" class="btn"></div>
                 <div class="accessories_line"></div>
-            </div>
-            <div class="selection_parameters">
-                <button id="Intel_Button_GPU" class="accessories_maker_intel">
-                    <img src="{{ url_for('static', filename='image/accessories/cpu_intel.png') }}" alt="CPU"
-                         class="accessories_cpu_img">
-                </button>
-                <button id="AMD_Button_GPU" class="accessories_maker_amd">
-                     <img src="static/image/accessories/cpu_amd.png" alt="CPU" class="accessories_cpu_img">
-                </button>
-                <button id="NVIDIA_Button_GPU" class="accessories_maker_amd">
-                     <img src="static/image/accessories/gpu_nvidia.png" alt="CPU" class="accessories_cpu_img">
-                </button>
-                <div id="cpuButtons" class="accessories_var"></div>
-                <p id="selectedCpu">Вы выбрали: </p>
+                <div id="Info_cpu" class="btn"></div>
                 <div class="accessories_line"></div>
+                <h3>Вы выбрали:</h3>
+                <div id="selectedText1_cpu"></div>
+                <h3>Цена:</h3>
+                <div id="selectedText2_cpu"></div>
+
             </div>
-        </div>
-        </div>
+            </div>
     </div>
+
 </div>
 
 <!-- Подвал -->

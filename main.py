@@ -1,26 +1,26 @@
 import sqlalchemy.exc
 from flask import Flask, render_template, redirect, url_for, request
-'''from flask_login import LoginManager, login_required, logout_user, login_user
+from flask_login import LoginManager, login_required, logout_user, login_user
 from data.forms import LoginForm, RegistrationForm
 from data.orm import User, Build
-from data.db_session import create_session, global_init'''
+from data.db_session import create_session, global_init
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'  # temp
-'''login_manager = LoginManager()
+login_manager = LoginManager()
 login_manager.init_app(app)
 
 @login_manager.user_loader
 def load_user(user_id):
     return User
 
-'''
+
 @app.route('/')
 def home():
     return render_template('index.html')
 
 
-'''
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -65,8 +65,8 @@ def profile():
 def logout():
     logout_user()
     return redirect(url_for('home'))
-'''
+
 
 if __name__ == '__main__':
-    #global_init('db/db.db')
+    global_init('db/db.db')
     app.run(debug=True)

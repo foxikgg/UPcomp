@@ -18,7 +18,7 @@ def load_user(user_id):
 @app.route('/')
 def home():
     return render_template('index.html')
-    #return render_template('login 2.html')
+
 
 '''
 @app.route('/login', methods=['GET', 'POST'])

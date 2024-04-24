@@ -15,9 +15,6 @@ class User(SqlAlchemyBase, UserMixin):
     modified_date = alc.Column(alc.DateTime, default=datetime.datetime.now)
     # builds = orm.relationship('Builds')
 
-    def is_authenticated(self):
-        return True
-
     def __repr__(self):
         return f'<User> {self.id} {self.username}'
 
@@ -31,13 +28,14 @@ class User(SqlAlchemyBase, UserMixin):
 class Build(SqlAlchemyBase):
     __tablename__ = 'builds'
     id = alc.Column(alc.Integer, primary_key=True, autoincrement=True)
-    # job = alc.Column(alc.String, nullable=True)
-    # work_size = alc.Column(alc.Integer, nullable=True, default=0)
-    # collaborators = alc.Column(alc.String, nullable=True)
-    # start_date = alc.Column(alc.DateTime, default=datetime.datetime.now)
-    # end_date = alc.Column(alc.DateTime, default=datetime.datetime.now)
-    # is_finished = alc.Column(alc.Boolean, default=True)
-    # team_leader = alc.Column(alc.Integer, alc.ForeignKey("users.id"))
+    cpu = alc.Column(alc.String)
+    motherboard = alc.Column(alc.String)
+    ram = alc.Column(alc.String)
+    hdd = alc.Column(alc.String, nullable=True)
+    ssd = alc.Column(alc.String, nullable=True)
+    psu = alc.Column(alc.String)
+    modified_date = alc.Column(alc.DateTime, default=datetime.datetime.now)
+    user_id = alc.Column(alc.Integer, alc.ForeignKey('users.id'))
     # user = orm.relationship('User')
 
     def __repr__(self):

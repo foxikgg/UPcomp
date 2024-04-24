@@ -48,7 +48,7 @@
     </p>
     {% endfor %}
     <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
-    <a href="/login">Already have an account?</a>
+    <a href="{{ url_for('login') }}">Already have an account?</a>
     <p>{{message}}</p>
 </form>
 </body>

@@ -1,28 +1,30 @@
 import sqlalchemy.exc
-from flask import Flask, render_template, redirect, url_for, request
-'''from flask_login import LoginManager, login_required, logout_user, login_user
+from flask import Flask, render_template, redirect, url_for
+from flask_login import LoginManager, logout_user, login_user, current_user
 from data.forms import LoginForm, RegistrationForm
 from data.orm import User, Build
-from data.db_session import create_session, global_init'''
+from data.db_session import create_session, global_init
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'  # temp
-'''login_manager = LoginManager()
+login_manager = LoginManager()
 login_manager.init_app(app)
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User
 
-'''
+@login_manager.user_loader
+def load_user(id):
+    return create_session().query(User).get(id)
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
-    #return render_template('login 2.html')
 
-'''
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('profile'))
     form = LoginForm()
     if form.validate_on_submit():
         db = create_session()
@@ -36,6 +38,8 @@ def login():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('profile'))
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User()
@@ -55,18 +59,27 @@ def register():
 
 
 @app.route('/profile')
-@login_required
 def profile():
-    return render_template('profile.html')
+    if current_user.is_authenticated:
+        return render_template('profile.html')
+    return redirect(url_for('login'))
+
 
 
 @app.route('/logout')
-@login_required
 def logout():
-    logout_user()
+    if current_user.is_authenticated:
+        logout_user()
     return redirect(url_for('home'))
-'''
+
+
+@app.route('/create_build', methods=['POST'])
+def create_build():
+    if current_user.is_authenticated:
+        return True
+    return
+
 
 if __name__ == '__main__':
-    #global_init('db/db.db')
+    global_init('db/db.db')
     app.run(debug=True)

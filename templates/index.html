@@ -155,32 +155,34 @@
     <div>
         <h2 class="accessories_h1">Процессор</h2>
         <div class="accessories_block">
-            <img src="{{ url_for('static', filename='image/accessories/cpu.png') }}" alt="Accessories"
-                 class="accessories_img">
+            {% if current_user.is_authenticated %}
+            <img src="{{ url_for('static', filename='image/accessories/cpu.png') }}" alt="Accessories" class="accessories_img">
             <div class="accessories_hint">
                 <div id="buttons" class="accessories_var">
 
-                    <button class="accessories_maker_intel" onclick="showCPUs('intel')" id="Intel_Button_CPU">
-                        <img src="{{ url_for('static', filename='image/accessories/cpu_intel.png') }}" alt="CPU"
-                         class="accessories_cpu_img"></button>
+                <button class="accessories_maker_intel" onclick="showCPUs('intel')" id="Intel_Button_CPU">
+                    <img src="{{ url_for('static', filename='image/accessories/cpu_intel.png') }}" alt="CPU" class="accessories_cpu_img"></button>
 
-                    <button class="accessories_maker_amd" onclick="showCPUs('amd')" id="AMD_Button_CPU">
-                        <img src="static/image/accessories/cpu_amd.png" alt="CPU" class="accessories_cpu_img">
-                    </button>
-                </div>
+                <button class="accessories_maker_amd" onclick="showCPUs('amd')" id="AMD_Button_CPU">
+                    <img src="static/image/accessories/cpu_amd.png" alt="CPU" class="accessories_cpu_img">
+                </button>
+                    </div>
 
-                <div id="Buttons_cpu" class="btn"></div>
-                <div class="accessories_line"></div>
-                <div id="Info_cpu" class="btn"></div>
-                <div class="accessories_line"></div>
-                <h3>Вы выбрали:</h3>
-                <div id="selectedText1_cpu"></div>
-                <h3>Цена:</h3>
-                <div id="selectedText2_cpu"></div>
+                    <div id="Buttons_cpu" class="btn"></div>
+                    <div class="accessories_line"></div>
+                    <div id="Info_cpu" class="btn"></div>
+                    <div class="accessories_line"></div>
+                    <h3>Вы выбрали:</h3>
+                    <div id="selectedText1_cpu"></div>
+                    <h3>Цена:</h3>
+                    <div id="selectedText2_cpu"></div>
 
             </div>
-            </div>
+            {% else %}
+            <p>Для доступа к этой функциональности необходимо <a href="{{ url_for('login') }}">войти</a> или <a href="{{ url_for('register') }}">зарегистрироваться</a>.</p>
+            {% endif %}
     </div>
+
 
 </div>
 

@@ -1095,7 +1095,6 @@ var gpu = {
 
 var Intel_Button_GPU = document.getElementById("Intel_Button_GPU");
 var AMD_Button_GPU = document.getElementById("AMD_Button_GPU");
-var NVIDIA_Button_GPU = document.getElementById("NVIDIA_Button_GPU");
 
 // Функция для создания кнопок
 function createButtons(data, parentDiv, path = '') {
@@ -1113,7 +1112,7 @@ function createButtons(data, parentDiv, path = '') {
         newButton.className = "accessories_option_btn"; // Добавляем класс
         newButton.addEventListener("click", function() {
             var newPath = path + ' ' + this.innerHTML;
-            document.getElementById('selectedCpu').innerHTML = 'Вы выбрали:' + newPath + ' core';
+            document.getElementById('selectedCpu').innerHTML = 'Вы выбрали:' + newPath;
             createButtons(data[item], newDiv, newPath);
         });
         newDiv.appendChild(newButton);

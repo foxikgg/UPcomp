@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Профиль</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    hello
+<div class="header">
+    <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='vector/logo.svg') }}" alt="Logo" class="logo_cap"></a>
+    <div class="menu">
+        <div class="auth">
+            <a href=""><img src="{{ url_for('static', filename='vector/ico/profile.svg') }}" alt="Icon"
+                            class="icon"></a>
+            <a class="menu-item" href="{{ url_for('logout') }}">Выйти</a>
+        </div>
+    </div>
+</div>
+<br>
+<div align="center">
+    <h1>Личный кабинет</h1>
+    <div>
+        <h3>Имя пользователя</h3>
+        <div class="user_data">{{ username }}</div>
+        <h3>Почта</h3>
+        <div class="user_data">{{ email }}</div>
+    </div>
+    <h2>Сборки</h2>
+    <div>
+        {% for build in builds %}
+            <div class="build-card">
+                <p><strong>Процессор:<br></strong> {{ build.cpu }}</p>
+                <p><strong>Видеокарта:<br></strong> {{ build.gpu }}</p>
+                <p><strong>Материнская плата:<br></strong> {{ build.motherboard }}</p>
+                <p><strong>Оперативная память:<br></strong> {{ build.ram }}</p>
+                <p><strong>Цена:<br></strong> {{ build.price }} ₽</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 </body>
 </html>

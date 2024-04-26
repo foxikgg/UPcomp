@@ -1,3 +1,93 @@
+/* Воход */
+
+.form-login {
+    display: flex; /* Используем гибкую модель размещения */
+    justify-content: center; /* Выравнивание контента по центру по горизонтали */
+    align-items: center; /* Выравнивание контента по центру по вертикали */
+
+    width: 400px;
+}
+
+/* CSS-правила для скругления углов для полей ввода и кнопок */
+.form-control, .btn {
+    border-radius: 5px; /* Скругление углов на 5px */
+}
+
+.btn_login {
+
+    background-color: #1AD993;
+    color: white;
+    padding: 5px 90px;
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: none;
+    display: inline-block;
+    font-size: 24px; /* Размер шрифта */
+    margin: 4px 2px; /* Отступы вокруг кнопки */
+    cursor: pointer; /* Изменение курсора при наведении */
+    border-radius: 100px; /* Скругление углов */
+    border: 0px;
+
+    width: 400px;
+}
+
+.remember {
+    background-color: #1AD993;
+    color: white;
+    padding: 5px 90px;
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: none;
+    display: inline-block;
+    font-size: 24px; /* Размер шрифта */
+    margin: 4px 2px; /* Отступы вокруг кнопки */
+    cursor: pointer; /* Изменение курсора при наведении */
+    border-radius: 100px; /* Скругление углов */
+    border: 0px;
+
+}
+
+.user_data {
+    margin-top: 10px;
+    background-color: white; /* Белый фон */
+    color: #1AD993; /* Цвет текста */
+
+    padding: 15px;
+
+
+    font-size: 18px; /* Размер шрифта */
+    border: 2px solid #1AD993; /* Зеленая обводка */
+    border-radius: 10px; /* Скругление углов */
+    margin-bottom: 10px; /* Отступ снизу */
+
+    width: 370px;
+    height: auto;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="login"], input[type="email"] {
+    margin-top: 10px;
+    background-color: white; /* Белый фон */
+    color: #1AD993; /* Цвет текста */
+    padding: 10px 15px; /* Подобный отступ вокруг текста */
+    font-size: 16px; /* Размер шрифта */
+    border: 2px solid #1AD993; /* Зеленая обводка */
+    border-radius: 10px; /* Скругление углов */
+    margin-bottom: 10px; /* Отступ снизу */
+
+    text-align: center; /* Выравнивание текста по центру */
+    box-shadow: none;
+    display: flex; /* Используем flexbox для центрирования содержимого */
+
+    align-items: center; /* Центрируем содержимое по вертикали */
+
+    width: 370px;
+
+}
+
+
+
+
+
 /* */
 body {
     margin: 0;
@@ -13,7 +103,7 @@ body {
 }
 
 
-
+/* */
 .header {
     display: flex;
     justify-content: space-between;
@@ -76,7 +166,7 @@ body {
 }
 
 
-/* */
+/* О нас */
 .content {
     height: 750px;
 
@@ -181,9 +271,7 @@ body {
     width: 300px;
 }
 
-.top_builds_ico {
-    
-}
+.top_builds_ico {}
 
 .top_builds_par {
     display: flex;
@@ -227,6 +315,7 @@ body {
 
 .selection_parameters {
     align-items: center;
+
 }
 
 .accessories_img {
@@ -249,6 +338,7 @@ body {
     width: 200px;
     height: auto;
     border-radius: 1000px;
+
 
     margin
 }
@@ -317,6 +407,7 @@ body {
 
 }
 .btn_intel:hover {
+
     background-color: #E9E9FD;
 }
 
@@ -334,6 +425,7 @@ body {
 }
 .btn_amd:hover {
     background-color: #E9E9FD;
+
 }
 
 
@@ -410,6 +502,8 @@ body {
     background-color: #E9E9FD;
 }
 
+
+/* Подвал */
 .menu_item_footer {
     color: #FFFFFF;
     text-decoration: none;
@@ -429,3 +523,28 @@ body {
     color: #FFFFFF;
     background-color: #025949;
 }
+
+.builds-container {
+    display: flex;
+    flex-wrap: nowrap; /* не переносить элементы на новую строку */
+    overflow-x: hidden; /* добавить горизонтальную прокрутку, если элементы не помещаются */
+}
+
+.build-card {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    min-width: 300px; /* Указываем минимальную ширину, чтобы карточки не сжимались */
+}
+
+.build-card h2 {
+    color: #333;
+}
+
+.build-card p {
+    font-size: 16px;
+    color: #666;
+}
+

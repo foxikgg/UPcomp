@@ -1218,8 +1218,148 @@ var cpuData = {
     }
 };
 
+var cpuName = {
+    "10100f": "Intel Core i3-10100f",
+    "10105": "Intel Core i3-10105",
+    "10105f": "Intel Core i3-10105f",
+    "12100": "Intel Core i3-12100",
+    "12100f": "Intel Core i3-12100f",
+    "13100": "Intel Core i3-13100",
+    "13100f": "Intel Core i3-13100f",
+    "14100": "Intel Core i3-14100",
+    "14100f": "Intel Core i3-14100f",
+    "10400": "Intel Core i5-10400",
+    "10400f": "Intel Core i5-10400f",
+    "10500": "Intel Core i5-10500",
+    "10600k": "Intel Core i5-10600k",
+    "10600kf": "Intel Core i5-10600kf",
+    "11400": "Intel Core i5-11400",
+    "11400f": "Intel Core i5-11400f",
+    "11600": "Intel Core i5-11600",
+    "11600k": "Intel Core i5-11600k",
+    "11600kf": "Intel Core i5-11600kf",
+    "12400": "Intel Core i5-12400",
+    "12400f": "Intel Core i5-12400f",
+    "12500": "Intel Core i5-12500",
+    "12600": "Intel Core i5-12600",
+    "12600k": "Intel Core i5-12600k",
+    "12600kf": "Intel Core i5-12600kf",
+    "13400": "Intel Core i5-13400",
+    "13400f": "Intel Core i5-13400f",
+    "13500": "Intel Core i5-13500",
+    "13600k": "Intel Core i5-13600k",
+    "13600kf": "Intel Core i5-13600kf",
+    "14400": "Intel Core i5-14400",
+    "14400f": "Intel Core i5-14400f",
+    "14500": "Intel Core i5-14500",
+    "14600k": "Intel Core i5-14600k",
+    "14600kf": "Intel Core i5-14600kf",
+    "10700": "Intel Core i7-10700",
+    "10700f": "Intel Core i7-10700f",
+    "10700k": "Intel Core i7-10700k",
+    "10700kf": "Intel Core i7-10700kf",
+    "11700": "Intel Core i7-11700",
+    "11700f": "Intel Core i7-11700f",
+    "11700k": "Intel Core i7-11700k",
+    "11700kf": "Intel Core i7-11700kf",
+    "12700": "Intel Core i7-12700",
+    "12700f": "Intel Core i7-12700f",
+    "12700k": "Intel Core i7-12700k",
+    "12700kf": "Intel Core i7-12700kf",
+    "13700": "Intel Core i7-13700",
+    "13700f": "Intel Core i7-13700f",
+    "13700k": "Intel Core i7-13700k",
+    "13700kf": "Intel Core i7-13700kf",
+    "14700": "Intel Core i7-14700",
+    "14700f": "Intel Core i7-14700f",
+    "14700k": "Intel Core i7-14700k",
+    "14700kf": "Intel Core i7-14700kf",
+    "10900": "Intel Core i9-10900",
+    "10900f": "Intel Core i9-10900f",
+    "10900k": "Intel Core i9-10900k",
+    "10900kf": "Intel Core i9-10900kf",
+    "11900": "Intel Core i9-11900",
+    "11900f": "Intel Core i9-11900f",
+    "11900k": "Intel Core i9-11900k",
+    "11900kf": "Intel Core i9-11900kf",
+    "12900": "Intel Core i9-12900",
+    "12900f": "Intel Core i9-12900f",
+    "12900k": "Intel Core i9-12900k",
+    "12900kf": "Intel Core i9-12900kf",
+    "13900": "Intel Core i9-13900",
+    "13900f": "Intel Core i9-13900f",
+    "13900k": "Intel Core i9-13900k",
+    "13900kf": "Intel Core i9-13900kf",
+    "13900ks": "Intel Core i9-13900ks",
+    "14900": "Intel Core i9-14900",
+    "14900f": "Intel Core i9-14900f",
+    "14900k": "Intel Core i9-14900k",
+    "14900kf": "Intel Core i9-14900kf",
+    "1200": "AMD Ryzen 3 1200",
+    "1300x": "AMD Ryzen 3 1300x",
+    "1200af": "AMD Ryzen 3 1200af",
+    "2300x": "AMD Ryzen 3 2300x",
+    "3100": "AMD Ryzen 3 3100",
+    "3300x": "AMD Ryzen 3 3300x",
+    "3500": "AMD Ryzen 3 3500",
+    "3500x": "AMD Ryzen 3 3500x",
+    "1400": "AMD Ryzen 5 1400",
+    "1500x": "AMD Ryzen 5 1500x",
+    "1600": "AMD Ryzen 5 1600",
+    "1600x": "AMD Ryzen 5 1600x",
+    "1600af": "AMD Ryzen 5 1600af",
+    "2600": "AMD Ryzen 5 2600",
+    "2600x": "AMD Ryzen 5 2600x",
+    "3600": "AMD Ryzen 5 3600",
+    "3600x": "AMD Ryzen 5 3600x",
+    "5500": "AMD Ryzen 5 5500",
+    "5600": "AMD Ryzen 5 5600",
+    "5600x": "AMD Ryzen 5 5600x",
+    "7500f": "AMD Ryzen 5 7500f",
+    "7600": "AMD Ryzen 5 7600",
+    "7600x": "AMD Ryzen 5 7600x",
+    "1700": "AMD Ryzen 7 1700",
+    "1700x": "AMD Ryzen 7 1700x",
+    "1800x": "AMD Ryzen 7 1800x",
+    "2700": "AMD Ryzen 7 2700",
+    "2700x": "AMD Ryzen 7 2700x",
+    "3700x": "AMD Ryzen 7 3700x",
+    "3800x": "AMD Ryzen 7 3800x",
+    "3800xt": "AMD Ryzen 7 3800xt",
+    "5700x": "AMD Ryzen 7 5700x",
+    "5800": "AMD Ryzen 7 5800",
+    "5800x": "AMD Ryzen 7 5800x",
+    "5800x3d": "AMD Ryzen 7 5800x3d",
+    "7700": "AMD Ryzen 7 7700",
+    "7700x": "AMD Ryzen 7 7700x",
+    "7800x3d": "AMD Ryzen 7 7800x3d",
+    "3900x": "AMD Ryzen 9 3900x",
+    "3900xt": "AMD Ryzen 9 3900xt",
+    "3950x": "AMD Ryzen 9 3950x",
+    "5900": "AMD Ryzen 9 5900",
+    "5900x": "AMD Ryzen 9 5900x",
+    "5950x": "AMD Ryzen 9 5950x",
+    "7900": "AMD Ryzen 9 7900",
+    "7900x": "AMD Ryzen 9 7900x",
+    "7900x3d": "AMD Ryzen 9 7900x3d",
+    "7950x": "AMD Ryzen 9 7950x",
+    "7950x3d": "AMD Ryzen 9 7950x3d",
+};
 
-function showCPUs(brand) {
+var cpuSocket = {
+    "10gen": "lga1200",
+    "11gen": "lga1200",
+    "12gen": "lga1700ddr4",
+    "13gen": "lga1700ddr4",
+    "14gen": "lga1700ddr5",
+    "zen": "am4",
+    "zen+": "am4",
+    "zen2": "am4",
+    "zen3": "am4",
+    "zen4": "am5"
+}
+
+function showCPU(brand) {
     var Buttons_cpuDiv = document.getElementById("Buttons_cpu");
     Buttons_cpuDiv.innerHTML = "";
     Buttons_cpuDiv.classList.add("buttons-cpu-container"); // Добавляем класс для контейнера
@@ -1228,16 +1368,14 @@ function showCPUs(brand) {
         var btn = document.createElement("button_cpu");
         btn.className = "btn_cpu";
         btn.textContent = cpu;
-        btn.onclick = function() { showGenerations(brand, cpu); };
+        btn.onclick = function() { showCPUgen(brand, cpu); };
         Buttons_cpuDiv.appendChild(btn);
     });
-
     selectedCPU = "";
-    document.getElementById("Info_cpu").innerHTML = "";
 }
 
-function showGenerations(brand, cpu) {
-    var Info_cpuDiv = document.getElementById("Info_cpu");
+function showCPUgen(brand, cpu) {
+    var Info_cpuDiv = document.getElementById("Buttons_cpu");
     Info_cpuDiv.innerHTML = "";
     Info_cpuDiv.classList.add("buttons-cpu-container"); // Добавляем класс для контейнера
 
@@ -1245,15 +1383,15 @@ function showGenerations(brand, cpu) {
         var btn = document.createElement("button_cpu");
         btn.className = "btn_cpu";
         btn.textContent = gen;
-        btn.onclick = function() { showModels(brand, cpu, gen); };
+        btn.onclick = function() { showCPUmodel(brand, cpu, gen); };
         Info_cpuDiv.appendChild(btn);
     });
 
     selectedCPU = cpu;
 }
 
-function showModels(brand, cpu, gen) {
-    var Info_cpuDiv = document.getElementById("Info_cpu");
+function showCPUmodel(brand, cpu, gen) {
+    var Info_cpuDiv = document.getElementById("Buttons_cpu");
     Info_cpuDiv.innerHTML = "";
     Info_cpuDiv.classList.add("buttons-cpu-container"); // Добавляем класс для контейнера
 
@@ -1261,21 +1399,31 @@ function showModels(brand, cpu, gen) {
         var btn = document.createElement("button_cpu");
         btn.className = "btn_cpu";
         btn.textContent = model;
-        btn.onclick = function() { showPrice(brand, cpu, gen, model); };
+        btn.onclick = function() { showCPUprice(brand, cpu, gen, model); };
         Info_cpuDiv.appendChild(btn);
     });
-
+    showMB(brand, cpuSocket[gen]);
     selectedCPU = gen;
 }
 
-function showPrice(brand, cpu, gen, model) {
+function showCPUprice(brand, cpu, gen, model) {
     var price = cpuData[brand][cpu][gen][model]["price"];
-    var modelDescription = cpuData[brand][cpu][gen][model]["name"]; // Получаем описание модели из словаря
+    var socket = cpuData[brand][cpu][gen][model]["socket"]
+    var modelDescription = cpuName[model]; // Получаем описание модели из словаря
+    var Info_cpuDiv = document.getElementById("Buttons_cpu");
 
     selectedCPU = model;
 
+    Info_cpuDiv.innerHTML = "";
     document.getElementById("selectedText1_cpu").textContent = modelDescription;
     document.getElementById("selectedText2_cpu").textContent = `${price} ₽`;
+}
+
+function mb_cpu(cpu_brand) {
+    showCPU(cpu_brand);
+    document.getElementById("Buttons_mb").textContent = "Сперва выберите процессор";
+    document.getElementById("selectedText1_mb").textContent = "";
+    document.getElementById("selectedText2_mb").textContent = "";
 }
 
 
@@ -1286,9 +1434,15 @@ var AMD_Button_CPU = document.getElementById("AMD_Button_CPU");
 Intel_Button_CPU.addEventListener("click", function() {
     this.classList.add("button-pressed-intel-cpu"); // Добавляем класс к нажатой кнопке
     AMD_Button_CPU.classList.remove("button-pressed-amd-cpu"); // Удаляем класс с другой кнопки
+    document.getElementById("selectedText1_cpu").textContent = "";
+    document.getElementById("selectedText2_cpu").textContent = "";
+    mb_cpu("intel");
 });
 
 AMD_Button_CPU.addEventListener("click", function() {
     this.classList.add("button-pressed-amd-cpu"); // Добавляем класс к нажатой кнопке
     Intel_Button_CPU.classList.remove("button-pressed-intel-cpu"); // Удаляем класс с другой кнопки
+    document.getElementById("selectedText1_cpu").textContent = "";
+    document.getElementById("selectedText2_cpu").textContent = "";
+    mb_cpu("amd");
 });

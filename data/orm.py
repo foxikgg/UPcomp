@@ -16,7 +16,7 @@ class User(SqlAlchemyBase, UserMixin):
     # builds = orm.relationship('Builds')
 
     def __repr__(self):
-        return f'<User> {self.id} {self.username}'
+        return f'<User> {self.id} {self.username} {self.email}'
 
     def set_password(self, password):
         self.hashed_password = generate_password_hash(password)
@@ -29,11 +29,13 @@ class Build(SqlAlchemyBase):
     __tablename__ = 'builds'
     id = alc.Column(alc.Integer, primary_key=True, autoincrement=True)
     cpu = alc.Column(alc.String)
+    gpu = alc.Column(alc.String)
     motherboard = alc.Column(alc.String)
     ram = alc.Column(alc.String)
-    hdd = alc.Column(alc.String, nullable=True)
-    ssd = alc.Column(alc.String, nullable=True)
-    psu = alc.Column(alc.String)
+    # hdd = alc.Column(alc.String, nullable=True)
+    # ssd = alc.Column(alc.String, nullable=True)
+    # psu = alc.Column(alc.String)
+    price = alc.Column(alc.Integer)
     modified_date = alc.Column(alc.DateTime, default=datetime.datetime.now)
     user_id = alc.Column(alc.Integer, alc.ForeignKey('users.id'))
     # user = orm.relationship('User')

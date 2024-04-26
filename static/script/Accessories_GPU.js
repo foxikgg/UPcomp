@@ -1,4 +1,4 @@
-var gpu = {
+var gpuData = {
     "nvidia": {
         "10s": {
             "1030": {
@@ -1052,7 +1052,7 @@ var gpu = {
                 "computer_bus": 256,
                 "released": "10.2023",
                 "manufacturers": {
-                    "asrock": 23499
+                    "gigabyte": 23499
                 }
             }
         },
@@ -1064,7 +1064,7 @@ var gpu = {
                 "computer_bus": 256,
                 "released": "10.2023",
                 "manufacturers": {
-                    "asrock": 26999
+                    "gigabyte": 26999
                 }
             },
             "a770x8": {
@@ -1074,7 +1074,7 @@ var gpu = {
                 "computer_bus": 256,
                 "released": "10.2022",
                 "manufacturers": {
-                    "asrock": 39499
+                    "gigabyte": 39499
                 }
             },
             "a770x16": {
@@ -1084,82 +1084,152 @@ var gpu = {
                 "computer_bus": 256,
                 "released": "10.2022",
                 "manufacturers": {
-                    "asrock": 34999
+                    "gigabyte": 34999
                 }
             }
         }
     }
 };
 
-// Получаем ссылку на кнопки
-
-var Intel_Button_GPU = document.getElementById("Intel_Button_GPU");
-var AMD_Button_GPU = document.getElementById("AMD_Button_GPU");
+var gpuName = {
+    "1030": "NVidia GeForce GT 1030",
+    "1050": "NVidia GeForce GTX 1050",
+    "1050ti": "NVidia GeForce GTX 1050 Ti",
+    "1060x3": "NVidia GeForce GTX 1060 3Gb",
+    "1060x6": "NVidia GeForce GTX 1060 6Gb",
+    "1070": "NVidia GeForce GTX 1070",
+    "1070ti": "NVidia GeForce GTX 1070 Ti",
+    "1080": "NVidia GeForce GTX 1080",
+    "1080ti": "NVidia GeForce GTX 1080 Ti",
+    "1650": "NVidia GeForce GTX 1650",
+    "1650s": "NVidia GeForce GTX 1650 SUPER",
+    "1660": "NVidia GeForce GTX 1660",
+    "1660s": "NVidia GeForce GTX 1660 SUPER",
+    "1660ti": "NVidia GeForce GTX 1660 Ti",
+    "2060x6": "NVidia GeForce RTX 2060 6Gb",
+    "2060x12": "NVidia GeForce RTX 2060 12Gb",
+    "2060s": "NVidia GeForce RTX 2060 SUPER",
+    "2070": "NVidia GeForce RTX 2070",
+    "2070s": "NVidia GeForce RTX 2070 SUPER",
+    "2080": "NVidia GeForce RTX 2080",
+    "2080s": "NVidia GeForce RTX 2080 SUPER",
+    "2080ti": "NVidia GeForce RTX 2080 Ti",
+    "3050x4": "NVidia GeForce RTX 3050 4Gb",
+    "3050x8": "NVidia GeForce RTX 3050 8Gb",
+    "3060x8": "NVidia GeForce RTX 3060 8Gb",
+    "3060x12": "NVidia GeForce RTX 3060 12Gb",
+    "3060ti": "NVidia GeForce RTX 3060 Ti",
+    "3060tix": "NVidia GeForce RTX 3060 Tix",
+    "3070": "NVidia GeForce RTX 3070",
+    "3070ti": "NVidia GeForce RTX 3070 Ti",
+    "3080x10": "NVidia GeForce RTX 3080 10Gb",
+    "3080x12": "NVidia GeForce RTX 3080 12Gb",
+    "3080ti": "NVidia GeForce RTX 3080 Ti",
+    "3090": "NVidia GeForce RTX 3090",
+    "3090ti": "NVidia GeForce RTX 3090 Ti",
+    "4060": "NVidia GeForce RTX 4060",
+    "4060tix8": "NVidia GeForce RTX 4060 Ti 8Gb",
+    "4060tix16": "NVidia GeForce RTX 4060 Ti 16Gb",
+    "4070": "NVidia GeForce RTX 4070",
+    "4070s": "NVidia GeForce RTX 4070 SUPER",
+    "4070ti": "NVidia GeForce RTX 4070 Ti",
+    "4070tis": "NVidia GeForce RTX 4070 Ti SUPER",
+    "4080": "NVidia GeForce RTX 4080",
+    "4080s": "NVidia GeForce RTX 4080 SUPER",
+    "4090": "NVidia GeForce RTX 4090",
+    "rx5500xt": "AMD Radeon RX 5500 XT",
+    "rx5600xt": "AMD Radeon RX 5600 XT",
+    "rx5700": "AMD Radeon RX 5700",
+    "rx5700xt": "AMD Radeon RX 5700 XT",
+    "rx6500xt": "AMD Radeon RX 6500 XT",
+    "rx6600": "AMD Radeon RX 6600",
+    "rx6600xt": "AMD Radeon RX 6600 XT",
+    "rx6650xt": "AMD Radeon RX 6650 XT",
+    "rx6700xt": "AMD Radeon RX 6700 XT",
+    "rx6750xt": "AMD Radeon RX 6750 XT",
+    "rx6800": "AMD Radeon RX 6800",
+    "rx6800xt": "AMD Radeon RX 6800 XT",
+    "rx6900xt": "AMD Radeon RX 6900 XT",
+    "rx7600": "AMD Radeon RX 7600",
+    "rx7600xt": "AMD Radeon RX 7600 XT",
+    "rx7700xt": "AMD Radeon RX 7700 XT",
+    "rx7800xt": "AMD Radeon RX 7800 XT",
+    "rx7900xt": "AMD Radeon RX 7900 XT",
+    "rx7900xtx": "AMD Radeon RX 7900 XTX",
+    "a310": "Intel Arc a310",
+    "a380": "Intel Arc a380",
+    "a580": "Intel Arc a580",
+    "a750": "Intel Arc a750",
+    "a770x8": "Intel Arc a770 8Gb",
+    "a770x16": "Intel Arc a770 16Gb"
+}
 
 // Функция для создания кнопок
-function createButtons(data, parentDiv, path = '') {
-    // Очищаем div перед добавлением новых кнопок
-    parentDiv.innerHTML = "";
+function showGPU(brand) {
+    var Buttons_gpuDiv = document.getElementById("Buttons_gpu");
+    Buttons_gpuDiv.innerHTML = "";
+    Buttons_gpuDiv.classList.add("buttons-gpu-container"); // Добавляем класс для контейнера
 
-    // Создаем новый div для кнопок
-    var newDiv = document.createElement("div");
-    newDiv.style.width = "300px";
+    Object.keys(gpuData[brand]).forEach(gpu => {
+        var btn = document.createElement("button_gpu");
+        btn.className = "btn_cpu";
+        btn.textContent = gpu;
+        btn.onclick = function() { showGPUgen(brand, gpu); };
+        Buttons_gpuDiv.appendChild(btn);
+    });
 
-    // Добавляем новые кнопки для каждого элемента в данных
-    for (var item in data) {
-        var newButton = document.createElement("button");
-        newButton.innerHTML = item;
-        newButton.className = "accessories_option_btn"; // Добавляем класс
-        newButton.addEventListener("click", function() {
-            var newPath = path + ' ' + this.innerHTML;
-            document.getElementById('selectedCpu').innerHTML = 'Вы выбрали:' + newPath;
-            createButtons(data[item], newDiv, newPath);
-        });
-        newDiv.appendChild(newButton);
-    }
+    selectedGPU = "";
+}
 
-    // Добавляем новый div в родительский div
-    parentDiv.appendChild(newDiv);
+function showGPUgen(brand, gpu) {
+    var Info_gpuDiv = document.getElementById("Buttons_gpu");
+    Info_gpuDiv.innerHTML = "";
+    Info_gpuDiv.classList.add("buttons-gpu-container"); // Добавляем класс для контейнера
+
+    Object.keys(gpuData[brand][gpu]).forEach(model => {
+        var btn = document.createElement("button_gpu");
+        btn.className = "btn_cpu";
+        btn.textContent = model;
+        btn.onclick = function() { showGPUmodel(brand, gpu, model); };
+        Info_gpuDiv.appendChild(btn);
+    });
+
+    selectedGPU = gpu;
+}
+
+function showGPUmodel(brand, gpu, model) {
+    var price = gpuData[brand][gpu][model]["manufacturers"]["gigabyte"];
+    var Info_gpuDiv = document.getElementById("Buttons_gpu");
+    Info_gpuDiv.innerHTML = "";
+    document.getElementById("selectedText1_gpu").textContent = gpuName[model];
+    document.getElementById("selectedText2_gpu").textContent = `${price} ₽`;
 }
 
 
-
-
-// Добавляем обработчик событий для нажатия
-Intel_Button_GPU.addEventListener("click", function() {
-    // Получаем ссылку на div
-    var cpuButtons = document.getElementById("cpuButtons_cpu");
-
-    // Очищаем div
-    cpuButtons.innerHTML = "";
-
-    createButtons(cpu.intel, cpuButtons);
-});
-
-Intel_Button_GPU.addEventListener("click", function() {
-    // Получаем ссылку на div
-    var cpuButtons = document.getElementById("cpuButtons_cpu");
-
-    // Очищаем div
-    cpuButtons.innerHTML = "";
-
-    createButtons(cpu.amd, cpuButtons);
-});
+var Intel_Button_GPU = document.getElementById("Intel_Button_GPU");
+var AMD_Button_GPU = document.getElementById("AMD_Button_GPU");
+var Nvidia_Button_GPU = document.getElementById("Nvidia_Button_GPU");
 
 Intel_Button_GPU.addEventListener("click", function() {
     this.classList.add("button-pressed-intel-gpu"); // Добавляем класс к нажатой кнопке
     AMD_Button_GPU.classList.remove("button-pressed-amd-gpu"); // Удаляем класс с другой кнопки
-    NVIDIA_Button_GPU.classList.remove("button-pressed-nvidia-gpu"); // Удаляем класс с другой кнопки
+    Nvidia_Button_GPU.classList.remove("button-pressed-nvidia-gpu"); // Удаляем класс с другой кнопки
+    document.getElementById("selectedText1_gpu").textContent = "";
+    document.getElementById("selectedText2_gpu").textContent = "";
 });
 
 AMD_Button_GPU.addEventListener("click", function() {
     this.classList.add("button-pressed-amd-gpu"); // Добавляем класс к нажатой кнопке
     Intel_Button_GPU.classList.remove("button-pressed-intel-gpu"); // Удаляем класс с другой кнопки
-    NVIDIA_Button_GPU.classList.remove("button-pressed-nvidia-gpu"); // Удаляем класс с другой кнопки
+    Nvidia_Button_GPU.classList.remove("button-pressed-nvidia-gpu"); // Удаляем класс с другой кнопки
+    document.getElementById("selectedText1_gpu").textContent = "";
+    document.getElementById("selectedText2_gpu").textContent = "";
 });
 
-NVIDIA_Button_GPU.addEventListener("click", function() {
+Nvidia_Button_GPU.addEventListener("click", function() {
     this.classList.add("button-pressed-nvidia-gpu"); // Добавляем класс к нажатой кнопке
     Intel_Button_GPU.classList.remove("button-pressed-intel-gpu"); // Удаляем класс с другой кнопки
     AMD_Button_GPU.classList.remove("button-pressed-amd-gpu"); // Удаляем класс с другой кнопки
+    document.getElementById("selectedText1_gpu").textContent = "";
+    document.getElementById("selectedText2_gpu").textContent = "";
 });

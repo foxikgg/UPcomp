@@ -1,12 +1,12 @@
 import sqlalchemy.exc
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 from flask_login import LoginManager, logout_user, login_user, current_user
 from data.forms import LoginForm, RegistrationForm
 from data.orm import User, Build
 from data.db_session import create_session, global_init
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'  # temp
+app.config['SECRET_KEY'] = open('secret.env', 'r').readlines()[0].split('=')[1]
 login_manager = LoginManager()
 login_manager.init_app(app)
 
@@ -16,13 +16,14 @@ def load_user(id):
     return create_session().query(User).get(id)
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template('index.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    print(current_user.is_authenticated)
     if current_user.is_authenticated:
         return redirect(url_for('profile'))
     form = LoginForm()
@@ -38,6 +39,7 @@ def login():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    print(current_user.is_authenticated)
     if current_user.is_authenticated:
         return redirect(url_for('profile'))
     form = RegistrationForm()
@@ -61,9 +63,10 @@ def register():
 @app.route('/profile')
 def profile():
     if current_user.is_authenticated:
-        return render_template('profile.html')
+        data = current_user.__str__().split()
+        builds = create_session().query(Build).filter(Build.user_id == int(current_user.__str__().split()[1]))
+        return render_template('profile.html', username=data[2], email=data[3], builds=builds)
     return redirect(url_for('login'))
-
 
 
 @app.route('/logout')
@@ -76,10 +79,23 @@ def logout():
 @app.route('/create_build', methods=['POST'])
 def create_build():
     if current_user.is_authenticated:
-        return True
-    return
+        db = create_session()
+        data = request.json
+        build = Build(
+            cpu=data['cpu'],
+            gpu=data['gpu'],
+            motherboard=data['mb'],
+            ram=data['ram'],
+            price=int(data['cost']),
+            user_id=int(current_user.__str__().split()[1])
+        )
+        db.add(build)
+        db.commit()
+        return jsonify(success=True)
+    return jsonify(success=False)
 
 
 if __name__ == '__main__':
-    global_init('db/db.db')
+    global_init('db.db')
+    a = 1
     app.run(debug=True)
